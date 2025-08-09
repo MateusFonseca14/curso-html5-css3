@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "idroid";
+  src: url("fontes/idroid.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font: normal 16px Arial, Verdana, serif;
+  background-color: #84e1ad;
+  margin: 0px;
+  height: 2450px;
+}
+
+p {
+  text-align: justify;
+  text-indent: 20px;
+  padding: 0px 10px 0px 10px;
+}
+
+span {
+  color: #1a5c38;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+header {
+  background-image: linear-gradient(to top, #1a5c38, #247749, #2ca05e, #36c275);
+  color: white;
+  padding: 10px;
+}
+
+header > h1 {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  letter-spacing: -1px;
+  border: black;
+  padding: 15px;
+}
+
+header > p {
+  color: white;
+  text-align: center;
+  padding: 5px 0px 5px 0px;
+}
+
+nav > p {
+  display: inline;
+  margin: 0px 5px 0px -10px;
+  font-weight: bold;
+}
+
+nav > p > a {
+  text-decoration: none;
+  color: white;
+}
+
+nav > p > a:hover {
+  text-decoration: underline;
+  color: #1a5c38;
+  background-color: #f8fcfa;
+  border-radius: 3px;
+  font-size: 17px;
+}
+
+main {
+  background-color: white;
+  margin: 0px 70px 0px 70px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 1px 10px 0px 10px;
+  height: 2250px;
+}
+
+article > h1 {
+  font-family: 'idroid', Times, serif;
+  color: #1a5c38;
+  margin: 20px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+article > h2 {
+  font-family: 'idroid', Times, serif;
+  font-size: 20px;
+  background-image: linear-gradient(to right, #c1e7d2, #e9f7ef, #f8fcfa);
+  color: #1a5c38;
+  margin: 20px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+article > p > a {
+  color: #1a5c38;
+  font-weight: bold;
+}
+
+article > p > a::after {
+  content: " 🔗";
+}
+
+article.video {
+  background: #1a5c38;
+  margin: 0px -10px 0px -10px;
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  margin: 0px 15px 0px 15px;
+}
+
+section {
+  background: #c5ebd6;
+  margin: 0px 15px 0px 15px;
+  border-radius: 5px;
+}
+
+section > h3 {
+  background: #2fa866;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 20px 0px 0px 0px;
+  padding: 10px 10px 10px 10px;
+}
+
+section > p {
+  margin: 10px 10px 10px 10px;
+  padding: 10px 0px 10px 0px;
+}
+
+section > div.androidname {
+  display: inline-block;
+  text-align: left;
+  margin: 0px 250px 0px -20px;
+  text-decoration: underline black;
+}
+section > div.androidname > p::before {
+  content: "\2714  ";
+  font-family: Arial, sans-serif;
+  color: black;
+  font-weight: bolder;
+}
+
+section > div.androidname > p {
+  margin: 0px;
+}
+
+section > p > a {
+  color: #1a5c38;
+  font-weight: bold;
+}
+
+section > p > a::after {
+  content: " 🔗";
+}
+
+p.final {
+  margin: 10px 10px 10px 10px;
+}
+
+footer {
+  padding: 0px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
+}
+
+footer > p {
+  background: #1a5c38;
+  color: white;
+  margin: 0px;
+  text-align: center;
+  height: 20px;
+  align-items: center;
+  padding: 10px 0;
+}

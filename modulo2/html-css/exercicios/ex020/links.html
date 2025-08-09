@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links</title>
+    <style>
+
+      /*   SELETORES PERSONALIZADOS
+           # = id
+           . = class
+           : = pseudo-class
+           :: = pseudo-element
+           > = children
+        
+        */
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      a {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      a:visited {
+        /* a:visited em CSS é usado para aplicar estilos a links que já foram visitados pelo usuário. */
+        color: darkred;
+      }
+
+      a:hover {
+        color: black;
+        text-decoration: underline;
+      }
+
+      a:active {
+        /* :active em CSS é usada para aplicar estilos a um elemento enquanto ele está sendo ativado — ou seja, durante o clique (entre pressionar e soltar o botão do mouse). */
+        color: yellow;
+      }
+
+      .especial {
+        background-color: rgb(250, 166, 166);
+      }
+
+      .especial::before {
+        /* O pseudo-elemento ::before representa um pseudo-elemento filho que é inserido imediatamente antes do conteúdo do elemento original. Ele é frequentemente usado para adicionar conteúdo decorativo a um elemento, usando a propriedade CSS content.
+
+ */
+        content: "⇒ ";
+      }
+
+      .especial::after {
+        /* O pseudo-elemento ::after representa um elemento fictício (virtual) que é inserido como o último filho de um elemento selecionado. Ele permite que você adicione conteúdo gerado via CSS depois do conteúdo real do elemento, sem precisar modificar o HTML. */
+        content: " ⇐";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Personalizando Links</h1>
+    <ul>
+      <li>
+        <a href="https://gustavoguanabara.github.io">Repositório GitHub</a>
+      </li>
+      <li>
+        <a href="https://youtube.com/cursoemvideo/" class="especial"
+          >Canal do YouTube</a
+        >
+      </li>
+      <li>
+        <a href="https://www.cursoemvideo.com" class="especial"
+          >Site do CursoemVideo</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>

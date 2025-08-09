@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+/*
+* → Seleciona todos os elementos da página
+
+margin: 0; e padding: 0; → Remove espaços padrão do navegador.
+
+box-sizing: border-box; → Faz com que o tamanho de largura/altura inclua borda e padding, facilitando o controle de layout.
+*/
+      }
+
+      .hero {
+/*
+position: relative;
+→ Permite posicionar elementos filhos de forma absoluta em relação a esse contêiner (caso queira no futuro).
+
+width: 100vw;
+→ Largura do contêiner = 100% da largura da janela (viewport).
+vw = viewport width.
+
+height: 100vh;
+→ Altura do contêiner = 100% da altura da janela (viewport).
+vh = viewport height.
+
+background-image: url(...);
+→ Define a imagem de fundo.
+*/
+
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("espaco.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+/*
+background-size: cover;
+→ Faz com que a imagem de fundo cubra todo o espaço disponível, sem deformar.
+
+background-position: center;
+→ Centraliza a imagem de fundo, mesmo quando ela é cortada.
+
+background-repeat: no-repeat;
+→ Evita que a imagem de fundo se repita.
+
+display: flex;
+→ Ativa o flexbox, que ajuda a centralizar o conteúdo.
+
+justify-content: center;
+→ Centraliza horizontalmente a imagem da frente.
+
+align-items: center;
+→ Centraliza verticalmente a imagem da frente.
+*/
+      }
+
+      .img-frente {
+        max-width: 80%;
+        height: auto;
+
+      }
+    </style>
+  </head>
+  <body> 
+    <div class="hero"> <!-- <div class="hero"> → É o contêiner principal da tela, onde vai a imagem de fundo. -->
+      <img src="astronauta.png" class="img-frente" />
+      <!-- <img src="..."> → É a imagem que ficará na frente, por cima da imagem de fundo. -->
+    </div>
+  </body>
+</html>

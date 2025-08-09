@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalhando com links</title>
+  </head>
+  <body>
+    <h1>Usando links externos</h1>
+    <p>
+      Você pode acessar o meu repositório público no
+      <a href="https://meugithub.github.io/" target="_blank" rel="external"
+        >GitHub</a
+      >
+    </p>
+    <!-- external - Este link leva para outro site, fora do domínio atual (Indica que o documento referenciado não faz parte do mesmo site que o documento atual.)-->
+    <p>
+      Você pode acessar o meu repositório público no
+      <a
+        href="https://meugithub.github.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+    </p>
+    <!-- _blank - Abre o link em uma nova aba, sem tirar o usuário do seu site.-->
+    <!-- noopener - Evita que o site externo possa acessar e manipular sua aba (segurança contra ataques).-->
+    <!-- noreferrer - Evita que o site de destino veja que o visitante veio do seu site (mais privacidade).-->
+    <a href=""></a
+    ><!--  É a tag de âncora, usada para criar links. -->
+    <h1>Usando links internos</h1>
+    <p>
+      Esta é a primeira página do site. Se você quiser, pode acessar também a
+      minha <a href="pag002.html" rel="next" target="_self">segunda página</a>
+    </p>
+    <p>
+      Você também pode acessar a nossa
+      <a href="noticias/pag003.html" rel="next" target="_self"
+        >página de notícias</a
+      >
+    </p>
+  </body>
+  <!-- next - Fornece um link para o próximo documento da série (indica o próximo documento.).-->
+  <!-- self - Abre o documento vinculado no mesmo quadro em que foi clicado (este é o padrão)(Abre o link no mesmo frame ou aba em que foi clicado.).-->
+  <h1>Links para download</h1>
+  <ul>
+    <li>
+      <a
+        href="livro/meulivro.pdf"
+        download="meulivro.pdf"
+        type="application/pdf"
+        >Baixar o livro em PDF</a
+      >
+    </li>
+    <li>
+      <a
+        href="livro/meulivro.zip"
+        download="meulivro.zip"
+        type="application/zip"
+        >Livro compactado em ZIP</a
+      >
+    </li>
+  </ul>
+  <!-- https://www.iana.org/assignments/media-types/media-types.xhtml - A página é o registro oficial dos tipos de mídia (MIME types) usados na internet. -->
+</html>

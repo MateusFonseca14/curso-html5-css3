@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradiente em CSS</title>
+    <style>
+      * {
+        /* *{} Configurações globais das CSS - Seleciona todos os elementos HTML da página, sem exceção.
+É usado quando você quer aplicar um estilo global a tudo. */
+        height: 100%; /* 100% da altura do elemento pai */
+      }
+      body {
+        background-image: linear-gradient(
+          to right,
+          #3198e2,
+          #6d59c0,
+          #b93590,
+          #e33f5f,
+          #fdd579
+        );
+        background-attachment: fixed;
+      }
+      /* background-image: linear-gradient(...)
+Define uma imagem de fundo com degradê linear.
+O valor to right indica que o gradiente vai da esquerda para a direita, passando pelas cores especificadas na ordem:*/
+
+      /*background-attachment: fixed;
+Faz com que o fundo permaneça fixo durante a rolagem da página.
+Isso cria um efeito visual conhecido como efeito parallax, onde o conteúdo se move, mas o fundo permanece parado.*/
+    </style>
+  </head>
+  <body>
+    <h1>Testando Gradiente</h1>
+  </body>
+</html>

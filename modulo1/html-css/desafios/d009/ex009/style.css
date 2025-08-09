@@ -1,0 +1,16 @@
+body {
+  text-align: center; /* Centraliza textos, links e imagens inline */
+  background-color: rgb(19, 18, 18);
+}
+h1 {
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+iframe {
+  /* Para centralizar blocos como <iframe>, use margin: 0 auto; com display: block; */
+  display: block;
+  margin: 0 auto;
+}
