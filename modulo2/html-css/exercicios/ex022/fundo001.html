@@ -6,7 +6,7 @@
     <title>Teste de Imagem de Fundo</title>
     <style>
 
-        body {
+        body { /* background-image - especifica uma ou mais imagens a serem usadas como plano de fundo de um elemento. Por padrão, elas são renderizadas empilhadas, com a primeira imagem listada sendo a mais próxima do usuário. */
             background-image: url('imagens/wallpaper001.jpg');
         }
 
@@ -25,10 +25,23 @@
 
         div#q2 {
             background-image: linear-gradient(to bottom, yellow, red);
+            /* No background-image, um gradiente é tratado como uma imagem gerada.
+            O valor linear-gradient(to bottom, yellow, red) significa:
+
+            Tipo de gradiente: linear-gradient → gradiente linear.
+
+            Direção: to bottom → a transição de cores começa no topo e vai até a parte inferior da caixa de pintura do fundo.
+
+            Paradas de cor:
+
+            yellow → cor inicial no topo (0%).
+
+            red → cor final no fundo (100%). */
         }
 
         div#q3 {
             background-image: url('imagens/pattern003.png');
+            /* URL de um arquivo (url("imagem.jpg")) */
         }
     </style>
 </head>

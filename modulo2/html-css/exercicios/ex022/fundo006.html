@@ -19,6 +19,12 @@
             */
             background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
             background-size: cover;
+            /*
+            Palavra-chave | Preserva proporção | Pode cortar imagem | Pode sobrar espaço
+            auto          | Sim                | Não                | Sim (se original não ocupar tudo)
+            contain       | Sim                | Não                | Sim
+            cover         | Sim                | Sim                | Não
+            */
         }
 
         main {
@@ -29,6 +35,14 @@
             border: 1px solid darkblue;
             border-radius: 15px
         }
+        /* background-attachment - A propriedade background-attachment especifica se a imagem de fundo está fixada em relação à área de visualização (viewport) ou se se move junto com o conteúdo do elemento ao rolar a página. 
+        
+        Valores possíveis
+        Valor	Comportamento oficial
+        scroll - (padrão)	A imagem de fundo rola junto com o conteúdo do elemento.
+        fixed -	A imagem de fundo é fixada em relação à viewport (área visível da janela), não se move ao rolar a página.
+        local -	A imagem de fundo rola junto com o conteúdo do elemento, incluindo quando o conteúdo é rolado internamente (em áreas com scroll interno).
+        */
     </style>
 </head>
 <body>

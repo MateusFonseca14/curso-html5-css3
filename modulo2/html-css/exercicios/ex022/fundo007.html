@@ -8,7 +8,10 @@
         #container {
             background-image: url('imagens/target001.png');
             background-size: 100% 100%;
+            /* position: relative;
+        Define o posicionamento do container como relativo. Isso não muda a posição dele em si, mas cria um contexto para posicionamento absoluto dos elementos filhos. Ou seja, quando dentro dele houver um elemento com position: absolute, as coordenadas desse elemento serão relativas ao container.
 
+        height: 96vh; */
             position: relative;
             height: 96vh;
             padding: 10px;
@@ -29,6 +32,16 @@
 
             transform: translate(-50%, -50%);
         }
+        /* transform - A propriedade transform permite aplicar transformações geométricas a um elemento, como translação (movimento), rotação, escala e inclinação.
+        Essas transformações afetam a renderização visual do elemento, sem alterar o fluxo do documento
+        
+        A função translate(tx, ty) move (translada) o elemento ao longo do eixo X e do eixo Y.
+        Os parâmetros tx e ty podem ser dados em várias unidades, incluindo valores percentuais.
+
+        Os valores percentuais são relativos às dimensões do próprio elemento:
+        tx = -50% significa mover o elemento horizontalmente para a esquerda em 50% da sua própria largura.
+        ty = -50% significa mover o elemento verticalmente para cima em 50% da sua própria altura.
+        */
     </style>
 </head>
 <body>
