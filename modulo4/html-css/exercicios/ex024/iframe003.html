@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95vw;
+            height: 400px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste rerum soluta esse quisquam possimus, maxime alias recusandae quae veritatis excepturi obcaecati itaque magnam tempora unde dicta vero, voluptates, atque ipsa!</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi dolores nostrum iure, accusantium commodi possimus voluptatem eveniet quasi expedita dolore quas cum, perferendis vel eos officia eum? Excepturi, possimus maiores?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem harum praesentium. Nulla ipsam consequuntur quam quisquam magni iure numquam pariatur obcaecati qui ipsum ea at reiciendis, saepe reprehenderit beatae.</p>
+
+    <iframe id="tela" name="frame" src=""> <!-- O atributo name é utilizado para nomear o contexto de navegação de um elemento, como um <iframe>, permitindo que outros elementos, como links ou formulários, interajam com ele por meio do atributo target. -->
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt recusandae blanditiis porro consequatur voluptates vitae quo quibusdam facere esse dicta, aut nihil illum nesciunt assumenda, impedit eligendi pariatur possimus veniam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, eos, facilis dolore neque quam voluptatibus et nobis corporis esse consequuntur earum. Ad soluta voluptas eveniet officia nostrum numquam cupiditate distinctio.</p>
+</body>
+</html>
