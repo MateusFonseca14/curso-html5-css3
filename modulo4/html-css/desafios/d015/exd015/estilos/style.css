@@ -23,7 +23,7 @@ body {
     background-image: url(../imagens/fundo-madeira.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: top center;
     text-align: right;
 }
 
@@ -55,17 +55,7 @@ body {
     margin: 10px;
 }
 
-#tela {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 268px;
-    height: 475px;
-    background-color: black;
-}
-
-#tela > img {
+iframe#tela {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,3 +64,4 @@ body {
     height: 475px;
     border: 1px solid rgba(0, 0, 0, 0.103);
 }
+
