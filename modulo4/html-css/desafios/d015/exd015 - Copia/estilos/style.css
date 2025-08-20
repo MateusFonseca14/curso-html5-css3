@@ -14,3 +14,47 @@ Position Absolute = SE POSICIONA
 
 "Eu me posiciono em relação ao meu pai que tem relative"
 E aí sim pode usar top, right, bottom, left para se mover */
+
+body {
+    display: flex;
+    position: relative;
+    background-image: url('../imagens/fundo-madeira.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+section#logo {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+section#logo > a > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+section#iphone > img {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+iframe#tela {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 268px;
+    height: 475px;
+    border: 1px solid rgba(0, 0, 0, 0.103);
+}
