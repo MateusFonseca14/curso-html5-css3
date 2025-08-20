@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Position Relative = REFERÊNCIA 
+
+"Eu sou o ponto de partida para meus filhos"
+O elemento fica na posição normal dele
+
+Position Absolute = SE POSICIONA 
+
+"Eu me posiciono em relação ao meu pai que tem relative"
+E aí sim pode usar top, right, bottom, left para se mover */
