@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="M"> <label for="isxmas">Masculino</label> <br>
+            <input type="radio" name="sexo" id="isxfem" value="F" checked> <label for="isxfem">Feminino</label>
+            <!-- 
+            <input type="radio">
+
+            O radio button (botão de opção) serve para o usuário escolher apenas UMA opção dentro de um grupo.
+            Diferente do checkbox, onde você pode marcar várias, o radio é exclusivo: ao marcar uma opção, a outra é desmarcada. 
+            
+            🔹 Importância de usar o mesmo name
+            👉 É fundamental colocar o mesmo valor no name para que o navegador saiba que os botões fazem parte do mesmo grupo.
+            Se tiverem o mesmo name → só 1 pode ser selecionado.
+            Se tiverem nomes diferentes → eles ficam independentes, permitindo marcar vários ao mesmo tempo (o que não faz sentido em perguntas de escolha única).
+
+            checked
+
+            O checked é um atributo booleano do HTML usado em checkbox e radio.
+            Ele define que a opção já vem marcada por padrão quando a página carrega.
+            O usuário pode desmarcar (no caso do checkbox) ou trocar a seleção (no caso do radio).
+            -->
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esfut" id="iesfut" checked> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label>
+        </fieldset>
+        <!-- 
+        <input type="checkbox"
+
+        O checkbox (caixa de seleção) é um campo de formulário que permite ao usuário marcar ou desmarcar uma opção.
+        Ele pode ser usado sozinho (sim/não, verdadeiro/falso).
+        Ou em grupos (várias opções independentes). -->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
