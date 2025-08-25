@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome Completo" autocomplete="name"> <!--  
+            autocomplete="name"
+
+            Esse valor é usado quando o campo espera o nome completo da pessoa (ex.: "Lionel Messi Roque").
+            Ele diz ao navegador:
+            “Este campo é para o nome completo do usuário.”
+            Assim, se o navegador já tem esse dado salvo, ele pode sugerir automaticamente.  -->
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" value="5" required>
+            <!-- 
+                min; valor mínimo permitido
+                max; valor máximo permitido
+                step;	intervalo entre os números (ex: 1, 0.5, 10)
+                required;	campo obrigatório
+                placeholder;	dica dentro da caixinha
+                value;	valor inicial do campo -->
+        </p>
+        <p>
+            <label for="imes">Período Letivo</label>
+            <input type="month" name="mes" id="imes" value="2025-08"> <!-- 
+                <input type="month">
+
+                Cria um campo de formulário para selecionar mês e ano.
+                Não permite escolher dias específicos, só mês e ano.
+                O navegador geralmente mostra um seletor de calendário limitado a mês/ano. -->
+        </p>
+        <p>
+            <label for="idia">Dia da Prova</label>
+            <input type="date" name="dia" id="idia" value="2025-08-25"> 
+            <!-- 
+            <input type="date">
+
+            Cria um campo de formulário para selecionar uma data completa (dia, mês e ano).
+            O navegador geralmente mostra um calendário interativo, para facilitar a escolha da data. -->
+        </p>
+        <p>
+           <label for="ihora">Horário da Prova</label>
+           <input type="time" name="hora" id="ihora">
+           <!-- 
+            <input type="time">
+
+            Cria um campo de formulário para selecionar uma hora (horas e minutos, opcionalmente segundos).
+            O navegador geralmente mostra um seletor de horário ou permite digitar no formato HH:MM. -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
