@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset> <!-- 
+            <fieldset>
+
+            O <fieldset> é usado para agrupar visual e semanticamente campos de formulário que têm algo em comum.
+            Ele deixa o formulário mais organizado e ajuda na acessibilidade.
+            🔹 Usos comuns
+
+            Agrupar informações pessoais
+            Agrupar endereços
+            Agrupar informações de pagamento
+
+            🔹 Elemento <legend>
+
+            Dentro do <fieldset>, geralmente se coloca um <legend>, que é o título do grupo.
+            O <legend> explica sobre o que é o grupo de campos. -->
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </p>
+            <p> <!--" Pode usar div ou p "
+            
+                <div>
+                É um container genérico.
+                Serve para organizar elementos visualmente ou estruturalmente.
+                Não tem significado semântico específico.
+                Ideal quando você quer agrupar campos do formulário ou estilizar com CSS.
+            
+                <p>
+                Representa um parágrafo de texto (conteúdo semântico).
+                Funciona bem para separar campos de formulário visualmente.
+                O navegador aplica margens automáticas, então o campo pode ficar mais espaçado.
+                -->
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+                <!--
+                <input type="email">
+                
+                Cria um campo de formulário para digitar e-mails.
+                O navegador valida automaticamente se o que foi digitado parece um e-mail válido (ex: contém @ e um domínio).
+                Ideal para cadastros, contatos ou qualquer lugar que precise de endereço de e-mail. -->
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxx-xxxx">
+                <!--
+                Estudar mais sobre RegEx
+
+                pattern="^$"
+                ^ → indica início do texto.
+                $ → indica fim do texto.
+
+                pattern="^[0-9]{4,5}-[0-9]{4}$" ou pattern="^\d{4,5}-\d{4}$"
+
+                ^ → início da string (começa aqui)
+                [0-9]{4} → quatro dígitos de 0 a 9
+                - → um traço literal no meio
+                [0-9]{4} → mais quatro dígitos
+                $ → fim da string (termina aqui)
+                Ou seja, só aceita exatamente quatro dígitos, um traço, quatro dígitos.
+
+                ^ → indica início da string (garante que não pode ter nada antes).
+                \d{4,5} → 4 ou 5 dígitos de 0 a 9.
+                - → traço literal que separa as duas partes.
+                \d{4} → 4 dígitos no final.
+                $ → indica fim da string (garante que não pode ter nada depois).
+
+                pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+
+                ^ → início da string.
+                \( → abre parêntese literal (precisa da barra invertida para escapar o ().
+                \d{2} → 2 dígitos do código de área (DDD).
+                \) → fecha parêntese literal.
+                \d{4,5} → 4 ou 5 dígitos do número principal (ex: celular ou fixo).
+                - → traço literal.
+                \d{4} → 4 dígitos finais.
+                $ → fim da string.
+
+                <input type="tel">
+
+                Cria um campo de formulário para digitar números de telefone.
+                Diferente de <input type="number">, ele não valida automaticamente o formato, porque números de telefone podem ter parênteses, traços, espaços e sinais de +.
+                Ideal para capturar telefone fixo, celular ou WhatsApp. -->
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
