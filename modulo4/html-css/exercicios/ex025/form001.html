@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Meu Primeiro Formulário</h1>
-    <form action="cadastro.php" method="get" autocomplete="off">
+    <form action="cadastro.php" method="POST" autocomplete="off">
         <p><label for="inome">Nome:</label> 
             <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label> 
@@ -23,3 +23,38 @@
     </form>
 </body>
 </html>
+
+        <!-- <form> → abre o formulário.
+
+            action="cadastro.php" → define para onde os dados digitados vão ser enviados. Aqui, será para o arquivo cadastro.php.
+
+            method="get" → define como os dados serão enviados.
+
+            get → envia os dados pela URL (aparece no navegador).
+
+            post → envia os dados de forma oculta (não aparece na URL).
+
+            autocomplete="off" → desativa a sugestão automática do navegador (aquele recurso que aparece com nomes já digitados antes). 
+
+
+            <label for="inome">Nome:</label>
+
+            label → legenda do campo.
+
+            for="inome" → conecta o rótulo ao campo de entrada que tem id="inome". Isso faz com que, ao clicar em “Nome:”, o cursor vá direto para o campo de texto.
+
+            <input type="text" name="nome" id="inome">
+
+            type="text" → campo para digitar texto.
+
+            name="nome" → o nome da variável que será enviada para o servidor (muito importante, é o que o PHP vai usar para capturar o valor).
+
+            id="inome" → identificador único do campo (usado para o label e também em CSS/JS se quiser estilizar).
+
+
+            <input type="submit"> → cria o botão que envia o formulário.
+
+            value="Enviar" → texto que aparece no botão.
+
+            Quando o usuário clicar em “Enviar”, os dados são enviados para o arquivo cadastro.php.
+        -->

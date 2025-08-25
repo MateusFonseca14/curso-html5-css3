@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="30" size="10" placeholder="nome do usuário" autocomplete="username"> <!-- 
+
+            autocomplete="username"
+            Está dizendo ao navegador:
+            “Este campo é para o nome de usuário”.
+            Assim, se a pessoa já preencheu esse campo em outros sites ou formulários, o navegador pode sugerir automaticamente o usuário salvo.
+
+            autocomplete="current-password"
+            Esse valor é usado em campos de senha já existente (quando o usuário vai entrar no sistema, e não criar uma nova senha).
+            Ele diz ao navegador:
+            “Este campo é para a senha atual do usuário”
+            Assim, o navegador pode oferecer senhas salvas para aquele login.
+
+            O placeholder é um texto de dica que aparece dentro da caixinha do <input>.
+            Ele some automaticamente quando o usuário começa a digitar.
+            Serve para dar instrução rápida sobre o que deve ser digitado.
+            
+            size="10" → a caixinha fica com espaço visual para uns 10 caracteres. -->
+        </p>
+        <p>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8" placeholder="mínimo 8 letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!-- 
+    required
+
+    Significa que o campo é obrigatório.
+    Se o usuário tentar enviar o formulário sem preencher, o navegador mostra uma mensagem de erro e não deixa enviar. 
+
+    minlength="5"
+
+    Define o número mínimo de caracteres que o usuário deve digitar.
+    Se escrever menos que 5 letras, o navegador não deixa enviar e avisa que é necessário mais caracteres.
+
+    maxlength="15"
+
+    Define o número máximo de caracteres que podem ser digitados.
+    O navegador não deixa digitar mais do que esse limite.
+
+
+    <input type="submit" value="Enviar">
+
+    É o botão de enviar.
+    Quando o usuário clicar nele, o formulário será enviado para o destino definido no action="..." do <form>.
+    O value="Enviar" é o texto que aparece no botão.
+
+    <input type="reset" value="Limpar">
+
+    É o botão de resetar.
+    Quando o usuário clicar, todos os campos do formulário voltam para o valor inicial (normalmente, ficam vazios).
+    O value="Limpar" é o texto que aparece no botão.
+-->
