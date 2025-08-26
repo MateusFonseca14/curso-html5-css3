@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">>
+        </p>
+            <!-- 
+            Como funciona na prática
+
+            Usuário digita 10 em Número 1 e 15 em Número 2.
+            oninput dispara.
+            Number(in1.value) + Number(in2.value) → 10 + 15 = 25.
+            isoma.innerHTML = 25 → mostra 25 dentro do <output>.
+
+            📌 Resumo:
+
+            oninput → dispara toda vez que o valor muda.
+            Pega os valores dos inputs, converte para número, soma e mostra no <output> em tempo real. -->
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+            <!-- 
+            <output> serve para mostrar resultados dinâmicos ou calculados dentro do HTML.
+            Funciona bem com formulários e scripts em JavaScript. -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
