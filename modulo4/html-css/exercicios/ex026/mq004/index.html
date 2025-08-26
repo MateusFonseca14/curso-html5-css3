@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/media-query.css"> 
 </head>
 <body>
-    
+    <main>
+        <h1>Testando Media Queries</h1>
+        <img id="phone" src="imagens/icon-phone.png" alt="Acessando via smartphone">
+        <img id="tablet" src="imagens/icon-tablet.png" alt="Acessando via tablet">
+        <img id="print" src="imagens/icon-print.png" alt="Versão para impressão">
+        <img id="pc" src="imagens/icon-pc.png" alt="Versão para desktop">
+        <img id="tv" src="imagens/icon-tv.png" alt="Versão para tv">
+    </main>
 </body>
 </html>
+<!-- 
+    Mobile First
+
+        Mobile First é uma estratégia de desenvolvimento web em que você começa criando o layout e o design para telas pequenas (celulares) e, depois, vai adaptando para telas maiores (tablet, desktop, TV etc).
+
+    🔎 Por que usar Mobile First?
+
+        Hoje, a maioria dos acessos à internet vem de smartphones.
+        Garante que o site funcione bem primeiro no mínimo necessário.
+        O código tende a ser mais leve e otimizado.
+        É mais fácil expandir do que reduzir um layout.
+
+    📌 Como aplicar na prática
+
+        Escreva o CSS padrão para o celular (sem media queries).
+        Assim, o site já nasce pronto para telas pequenas.
+        Adicione media queries para telas maiores:
+        Tablet
+        Desktop
+        Telas grandes 
+
+    Curiosidades
+
+        Criador do conceito: Luke Wroblewski
+        Ano: 2009 (e consolidado em 2011 com o livro)
+        Motivo: O crescimento absurdo do uso de smartphones para acessar a internet
+-->
