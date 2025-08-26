@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado: </label>
+            <select name="estado" id="iest">
+            <!-- 
+            <label> = texto que descreve um campo do formulário (externo ao select, acessibilidade).
+
+            label="..." no <optgroup> = título de grupo de opções dentro do select (apenas organizador). -->
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+            <!-- 
+            selected → escolhe qual delas aparece marcada de início.
+            -->
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+            <!-- 
+                <select> → cria a lista suspensa. 
+                
+                <option> → cada linha representa uma opção da lista.
+            -->
+        </p>
+
+        <p>
+            <label for="ipro">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option>Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist><!-- No <datalist>, você pode ter com value ou sem value: -->
+            <!-- 
+            O datalist é uma lista de opções pré-definidas que o usuário pode escolher ou ignorar.
+            Ele não aparece sozinho — precisa estar ligado a um <input>.
+            A ligação acontece com o atributo list do <input>, que deve ter o mesmo valor que o id do <datalist>. -->
+        </p>
+
+        <P>
+            <label for="imsg">Mensagem: </label> <br>
+           <textarea name="msg" id="imsg" cols="30" rows="10">Sua mensagem aqui...</textarea> <!-- 
+           <textarea> = campo de texto multilinha.(Quando você usa <textarea> em um formulário, para enviar o conteúdo corretamente, você precisa colocar dentro de um <form> e geralmente usar method="post", especialmente se for texto grande ou sensível.)
+           cols e rows = tamanho da caixa (largura x altura).
+           Pode ter conteúdo inicial escrito entre as tags. -->
+        </P>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+
+<!-- 
+✅ 1. <label for="iest">Estado</label>
+
+Esse faz parte de formulários.
+Ele está ligado a um campo (nesse caso o <select id="iest">).
+O atributo for="iest" conecta o texto "Estado" ao campo de seleção.
+Resultado: se o usuário clicar em "Estado", o foco vai direto para o select.
+Serve para acessibilidade (leitores de tela entendem que esse texto pertence ao campo).
+
+✅ 2. <optgroup label="Sudeste">
+
+Esse não tem relação com formulários, ele é só visual dentro do select.
+O label aqui é um atributo do optgroup, que dá nome ao grupo de opções.
+O usuário não pode selecionar "Sudeste", só as opções dentro dele.
+-->
