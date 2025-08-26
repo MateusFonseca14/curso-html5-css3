@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+     <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+            <!-- 
+            <input type="color"
+
+            Quando o usuário clica no campo, abre-se uma caixa de seleção de cores (color picker).
+            Ele pode escolher uma cor, e o valor será retornado em formato hexadecimal (ex: #ff0000 para vermelho). -->
+        </p>
+
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+            <!-- 
+            <input type="range">
+
+            O usuário arrasta o controle da barra.
+            O valor é numérico e vai do mínimo (min) ao máximo (max).
+            Você pode definir o passo (step) para pular valores. -->
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do Perfil: </label>
+            <input type="file" name="foto" id="ifoto">
+            <!-- 
+            <input type="file"> = campo para upload de arquivos.
+            É usado em formulários de cadastro, envio de imagens, currículos, documentos etc. 
+            
+            Quando você usa:
+
+            <input type="file">
+            não pode usar method="get" no <form>.
+            🔎 Por quê?
+            O método GET envia os dados pela URL do navegador.
+            Arquivos podem ser grandes e binários, então não podem ser enviados pela URL.
+            Por isso, para upload de arquivos, sempre use method="post".
+
+            -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+     </form>
+</body>
+</html>
