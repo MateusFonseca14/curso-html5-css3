@@ -55,5 +55,39 @@
             }
         }
     </script>
+    <!--
+    🔹 Linha 1: <script>
+
+    Inicia um bloco de código JavaScript dentro do HTML.
+    Tudo que estiver entre <script> e </script> será interpretado como JS pelo navegador.
+
+    🔹 Linha 2: function clickMenu() {
+
+    Define uma função chamada clickMenu.
+    Função = bloco de código que só é executado quando você chama(por exemplo, ao clicar em um botão).
+
+    🔹 Linha 3: if (itens.style.display == 'block') {
+
+    Começa uma condicional if.
+    Testa se o estilo CSS display do elemento itens é igual a 'block'.
+    == significa verificar igualdade de valor.
+    Se a condição for verdadeira, o código dentro desse bloco { ... } será executado.
+    Observação: itens precisa ser definido antes no JS, normalmente assim:
+
+    🔹 Linha 4: itens.style.display = 'none'
+
+    Se o elemento estava visível (display: block), agora ele é escondido.
+    display: none → elemento some da tela e não ocupa espaço.
+
+    🔹 Linha 5: } else {
+
+    Começa o bloco “caso contrário”.
+    Ou seja, se o if foi falso (o elemento não estava com display block), o código dentro do else será executado.
+
+    🔹 Linha 6: itens.style.display = 'block'
+
+    Torna o elemento visível novamente, ocupando espaço na tela.
+    display: block → elemento é mostrado como um bloco normal (quebra linha etc.).
+    -->
 </body>
 </html>
