@@ -19,10 +19,11 @@ main {
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
 
+    /* para centralizar */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 }
 
 main > h1 {
