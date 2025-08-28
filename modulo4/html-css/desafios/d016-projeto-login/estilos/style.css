@@ -12,13 +12,17 @@ body {
 
 main {
     width: 250px;
-    height: 510px;
+    height: 520px;
     border-radius: 20px;
-    margin-top: 220px;
 
     background-color: white;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 main > h1 {
@@ -52,35 +56,93 @@ form > p {
     margin: 5px 10px;
 }
 
-form > p#cxemail {
+form > p#cxemail , p#cxsenha {
     width: 230px;
-    height: 40px;
-    border-radius: 8px;
+    height: 42px;
+    border-radius: 7px;
 
     background-color: #5F2C82;
     color: white;
 }
 
-form > p#cxsenha {
-    width: 230px;
-    height: 40px;
-    border-radius: 8px;
-
-    background-color: #5F2C82;
-    color: white;
-}
-
-input#iemail  {
-    height: 35px;
-    border-radius: 8px;
+input#iemail, input#isenha {
+    height: 34px;
+    border-radius: 7px;
     padding-block: 1px;
     padding-inline: 6px;
     border: none;
-
+    transform: translateX(4px) translatey(4px); 
+    /* 
+    4px no X → joga o ícone um pouco para a direita.
+    4px no Y → deixa ele um pouco mais para baixo. 
+    */
     background-color: #94CFCD;
 }
 
-span.material-icons {
-    font-size: 30px;
-
+input#iemail:focus, input#isenha:focus {
+    background-color: white;
 }
+
+
+#cxemail .material-icons, #cxsenha .material-icons {
+    font-size: 30px;      /* aumenta o tamanho do ícone */
+    vertical-align: middle; /* centraliza com a linha base */
+    transform: translateY(4px); /* move o ícone 4px para baixo */
+}
+
+::placeholder { /* para alterar o placeholder */
+    font-size: 1.1em;
+}
+
+p#cxentrar {
+    height: 40px;
+    border-radius: 7px;
+
+    background-color: #53AAA7;
+    cursor: pointer;
+}
+
+p#cxentrar > button {
+    border: none;
+    padding: 13px 0px 0px 0px;
+    font-size: 0.9em;
+
+    background-color: #53AAA7;
+    color: white;
+    cursor: pointer;
+}
+
+#cxentrar:hover {
+    background-color: #2a5a58;
+}
+
+#cxentrar:hover button {
+    background-color: #2a5a58;
+}
+
+p#cxrecuperarsenha {
+    height: 40px;
+    border-top: 1px solid #53AAA7;
+    border-bottom: 1px solid #53AAA7;
+    border-left: 1px solid #4b9996;
+    border-right: 1px solid  #4b9996;
+    border-radius: 7px;
+}
+
+p#cxrecuperarsenha > a {
+    font-size: 0.9em;
+    text-decoration: none;
+    
+    color: #2a5a58;
+ }
+
+#cxrecuperarsenha .material-icons {
+    padding: 10px 0px;
+    font-size: 13px;
+
+    color: #357270;
+ }
+
+ p#cxrecuperarsenha:hover {
+    background-color: #6CD3CF;
+ }
