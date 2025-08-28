@@ -1,1 +1,90 @@
 @charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+
+body {
+    background: linear-gradient(to top, #4B959B, #5E3083);
+
+    /* para aparecer na tela */
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    width: 620px;
+    height: 290px;
+
+    text-align: center;
+}
+
+main > div#imglogin {
+    position: absolute;
+    width: 190px;
+    height: 290px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid rgb(204, 204, 204);
+
+    background-position: left center;
+}
+
+main > h1 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.4em;
+
+    transform: translateX(350px);
+}
+
+main > p {
+    position: absolute;
+    margin: 10px 0px;
+    padding: 10px 5px;
+    width: 400px;
+    height: 250px;
+
+    transform: translateX(195px) translateY(40px);
+}
+
+form > p {
+    margin: 5px 10px;
+}
+
+form > p#cxemail , p#cxsenha {
+    width: 410px;
+    height: 40px;
+
+    transform: translateX(45px) translateY(40px);
+}
+
+input#iemail, input#isenha {
+    padding-inline: 5px;
+    padding-inline-end: 190px;
+
+    transform: translateX(2px) translatey(3px);
+}
+
+input#iemail:focus, input#isenha:focus {
+    background-color: white;
+}
+
+#cxemail .material-icons, #cxsenha .material-icons {
+    font-size: 31px;  
+    transform: translateY(4px) translateX(0px); 
+}
+
+p#cxentrar {
+    height: 40px;
+
+    transform: translateY(40px) translateX(45px);
+}
+
+p#cxrecuperarsenha {
+    height: 40px;
+
+    transform: translateY(40px) translateX(45px);
+}
+
+}
