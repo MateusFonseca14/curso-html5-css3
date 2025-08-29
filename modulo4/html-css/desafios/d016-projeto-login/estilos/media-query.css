@@ -87,4 +87,99 @@ p#cxrecuperarsenha {
     transform: translateY(40px) translateX(45px);
 }
 
+
+}
+
+@media screen and (min-width: 992px) {
+
+body {
+    background: linear-gradient(to top, #4B959B, #5E3083);
+
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    width: 950px;
+    height: 350px;
+
+    text-align: center;
+}
+
+main > div#imglogin {
+    position: absolute;
+    width: 475px;
+    height: 350px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-left: 1px solid rgb(204, 204, 204);
+    border-right: none;
+
+    background-position: left bottom;
+    right: 0px;
+}
+
+main > h1 {
+    margin: 10px;
+    padding: 10px;
+    font-size: 2em;
+
+    transform: translateX(170px);
+}
+
+main > p {
+    position: absolute;
+    margin: 10px 0px;
+    padding: 10px 5px;
+    width: 465px;
+    height: 250px;
+    font-size: 15px;
+
+    transform: translateX(5px) translateY(55px);
+}
+
+form > p {
+    margin: 5px 10px;
+}
+
+form > p#cxemail , p#cxsenha {
+    width: 455px;
+    height: 40px;
+
+    transform: translateX(-300px) translateY(45px);
+}
+
+input#iemail, input#isenha {
+    padding-inline: 5px;
+    padding-inline-end: 230px;
+
+    transform: translateX(5px) translatey(3px);
+}
+
+input#iemail:focus, input#isenha:focus {
+    background-color: white;
+}
+
+#cxemail .material-icons, #cxsenha .material-icons {
+    font-size: 31px;  
+    transform: translateY(4px) translateX(0px); 
+}
+
+p#cxentrar {
+    height: 40px;
+    font-size: 17px;
+
+    transform: translateY(45px) translateX(-300px);
+}
+
+p#cxrecuperarsenha {
+    height: 40px;
+    font-size: 17px;
+
+    transform: translateY(45px) translateX(-300px);
+}
+
 }
