@@ -37,3 +37,64 @@
     </main>
 </body>
 </html>
+
+<!--
+1. Pensar Mobile First
+
+👉 Seu style.css deve ser feito para celular primeiro, sem remendos (translateX, translateY).
+No seu código original, no celular os inputs estavam sendo deslocados à força com transform.
+✅ Solução: usar flexbox + gap para alinhar ícone + input, sem precisar empurrar manualmente.
+
+2. Estrutura do HTML
+
+No original, o <main> tinha direto div#imglogin, h1, p e o <form>.
+Isso dificulta organizar em colunas.
+✅ Melhorar criando um <section> para agrupar título, texto e formulário → isso facilita o display: flex no main quando a tela for maior.
+
+3. Imagem
+
+No seu código, a imagem era só um div#imglogin com background-image. Isso está certo 👍, mas faltava pensar no fluxo:
+
+No celular, ela deve ficar em cima.
+
+No tablet/desktop, ela deve ficar ao lado.
+✅ Isso se resolve apenas com display: flex no main dentro das media queries.
+
+4. Media Queries
+
+No original, você usava muitos transform: translate(...) para "empurrar" os elementos em 768px e 992px. Isso quebra fácil em telas diferentes.
+✅ Trocar transform por:
+
+flexbox (display: flex, flex: 1, align-items, justify-content)
+
+padding e margin normais
+
+gap entre elementos
+
+Isso deixa o layout fluido, sem valores fixos.
+
+5. Caixas do formulário
+
+No original, as caixas (#cxemail, #cxsenha, #cxentrar, #cxrecuperarsenha) tinham larguras fixas (230px, 410px, 455px) dependendo do breakpoint.
+✅ Melhorar usando width: 100% dentro da coluna → assim se adaptam ao espaço disponível.
+
+📌 Resumindo o que você deve corrigir:
+
+ Tirar todos os transform: translate(...) → substitua por flexbox + gap + margin/padding.
+
+ Criar um <section> no HTML para agrupar conteúdo ao lado da imagem.
+
+ Deixar as larguras dos inputs/caixas flexíveis (width: 100%) nos breakpoints.
+
+ Base no celular bem organizada → style.css deve ser pensado para telas pequenas.
+
+ Media queries só para organizar em colunas e aumentar tamanhos → nada de remendo manual.
+
+👉 Se você aplicar essas mudanças, seu layout vai ficar igual ao que te mostrei:
+
+Mobile: imagem em cima, formulário embaixo.
+
+Tablet: imagem à esquerda, conteúdo à direita.
+
+Desktop: imagem maior, conteúdo mais largo e espaçado.
+-->
