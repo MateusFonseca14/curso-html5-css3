@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/* Tablet em pé (>=768px) */
+@media screen and (min-width: 768px) {
+
+body {
+    background: linear-gradient(to top, #4B959B, #5E3083);
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    width: 620px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+
+main > div#imglogin {
+    width: 190px;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid #ccc;
+}
+
+main > section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main > h1 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+main > p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+form > p#cxemail, 
+form > p#cxsenha,
+p#cxentrar, 
+p#cxrecuperarsenha {
+    width: 100%;
+}
+
+}
+
+/* Notebook / desktop pequeno (>=992px) */
+@media screen and (min-width: 992px) {
+
+body {
+    background: linear-gradient(to top, #4B959B, #5E3083);
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    width: 950px;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+
+main > div#imglogin {
+    width: 475px;
+    border-radius: 0 20px 20px 0;
+    border-left: 1px solid #ccc;
+}
+
+main > section {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main > h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main > p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+form > p#cxemail, 
+form > p#cxsenha,
+p#cxentrar, 
+p#cxrecuperarsenha {
+    width: 100%;
+}
+
+}

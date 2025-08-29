@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Tela de Login</title>
+    <link rel="stylesheet" href="estilos/style.css" media="screen">
+    <link rel="stylesheet" href="estilos/media-query.css" media="screen">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- Coluna da imagem (fundo via CSS) -->
+        <div id="imglogin"></div>
+
+        <!-- Coluna do conteúdo -->
+        <section>
+            <h1>Login</h1>
+            <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+            
+            <form action="adm.php" method="get" autocomplete="on">
+                <p id="cxemail">
+                    <span class="material-icons">person</span>
+                    <input type="email" name="email" id="iemail" required placeholder="seu e-mail">
+                </p>
+
+                <p id="cxsenha">
+                    <span class="material-icons">vpn_key</span>
+                    <input type="password" name="senha" id="isenha" required minlength="8" placeholder="sua senha">
+                </p>
+
+                <p id="cxentrar">
+                    <button type="submit">Entrar</button>
+                </p>
+
+                <p id="cxrecuperarsenha">
+                    <a href="recuperar-senha.html">Esqueci a senha</a>
+                    <span class="material-icons">email</span>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
