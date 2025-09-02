@@ -30,7 +30,7 @@
 
         Valores mais comuns de justify-content
 
-            flex-start → itens encostados no início do eixo principal
+            flex-start (padrão) → itens encostados no início do eixo principal
 
             flex-end → itens encostados no final do eixo principal
 
@@ -48,15 +48,44 @@
 
             Valores comuns:
 
+            stretch (padrão) → itens preenchem todo o espaço disponível no eixo transversal (altura ou largura, dependendo do eixo) stretch = estica os itens no cross axis (eixo transversal)
+
             flex-start → itens encostam no início do eixo transversal
 
             flex-end → itens encostam no fim do eixo transversal
 
             center → itens centralizados no eixo transversal
 
-            stretch → itens preenchem todo o espaço disponível no eixo transversal (altura ou largura, dependendo do eixo) stretch = estica os itens no cross axis (eixo transversal)
-
             baseline → itens alinhados pelas suas linhas de base do texto
+
+    📌 align-content
+        Alinha todas as linhas de itens dentro do container no eixo transversal (cross axis).
+
+            Só funciona quando o container tem múltiplas linhas (flex-wrap: wrap ou wrap-reverse).
+
+            Não afeta itens individuais dentro de uma linha — para isso usamos align-items.
+
+        Valores comuns
+
+            stretch (padrão) → linhas se esticam para preencher o container
+
+            flex-start → linhas encostam no início do eixo transversal
+
+            flex-end → linhas encostam no final do eixo transversal
+
+            center → linhas centralizadas
+
+            space-between → distribui o espaço entre as linhas
+
+            space-evenly → espaço igual entre as linhas e nas extremidades
+
+            space-around → distribui o espaço em torno das linhas
+
+        💡 Resumo rápido:
+
+            align-content = controla todas as linhas no eixo transversal
+
+            align-items = controla itens individuais no eixo transversal
 
         flex-wrap → Define se os itens podem quebrar linha.
 
@@ -74,7 +103,7 @@
 
             O wrap-reverse só inverte a direção do cross axis: linhas aparecem “acima” ou colunas aparecem “à esquerda”.
 
-    📌 flex: auto
+    📌 flex: auto 
 
         É um atalho para:
 
