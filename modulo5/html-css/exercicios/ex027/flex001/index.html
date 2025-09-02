@@ -13,6 +13,8 @@
 
         /*
     Propriedades mais usadas com display: flex;
+    
+Propriedades do Container (afetam o layout dos itens dentro)
 
         flex-direction → Define a direção dos itens.
 
@@ -103,9 +105,49 @@
 
             O wrap-reverse só inverte a direção do cross axis: linhas aparecem “acima” ou colunas aparecem “à esquerda”.
 
-    📌 flex: auto 
+Propriedades dos Itens (afetam cada item individual)
 
-        É um atalho para:
+    📌 flex: initial 
+
+            É um atalho para:
+
+            (padrão) flex: 0 1 auto; 
+
+        Explicando cada parte do padrão:
+
+            flex-grow: 0 → o item não cresce além do seu tamanho inicial.
+
+            flex-shrink: 1 → o item pode encolher se faltar espaço.
+
+            flex-basis: auto → o tamanho inicial é baseado no conteúdo ou no width/height definido.
+        
+        💡 Resumo:
+
+            flex: initial = padrão do Flexbox = 0 1 auto
+
+            Se você não escrever nada, o item já se comporta assim por padrão.
+
+        flex: none
+
+            É um atalho para:
+
+            flex: 0 0 auto
+
+            flex-grow: 0 → o item não cresce, mesmo se houver espaço sobrando no container.
+
+            flex-shrink: 0 → o item não encolhe, mesmo que falte espaço.
+
+            flex-basis: auto → o tamanho inicial é baseado no conteúdo ou no width/height definido.
+
+        💡 Resumo:
+
+            O item fica fixo no seu tamanho natural, não cresce nem encolhe.
+
+            É útil quando você quer proteger o tamanho de um item, independentemente do espaço do container.
+
+        flex: auto 
+
+            É um atalho para:
 
             flex: 1 1 auto;
 
@@ -118,11 +160,33 @@
 
             flex-basis: auto → o tamanho inicial é baseado no conteúdo ou em um valor definido de width/height.
 
-    ⚡ Em resumo:
+        ⚡ Em resumo:
 
-        display: flex → cria o sistema de alinhamento.
+            display: flex → cria o sistema de alinhamento.
 
-        flex: auto → faz os itens dentro desse sistema crescerem/encolherem de forma equilibrada.
+            flex: auto → faz os itens dentro desse sistema crescerem/encolherem de forma equilibrada.
+
+        flex: <positive-number> (pode ser qualquer número o 3 é só exemplo)
+
+            Atalho para:
+
+            flex: 3 1 0
+
+        Explicação de cada parte
+
+            flex-grow: <número> → define quanto o item vai crescer em relação aos outros itens dentro do container.
+
+            flex-shrink: 1 → o item pode encolher se faltar espaço, padrão do atalho.
+
+            flex-basis: 0 → o tamanho inicial é 0, então o crescimento depende totalmente do flex-grow.
+
+        💡 Resumo
+
+            flex: <positive-number> é um atalho rápido para definir apenas o crescimento proporcional.
+
+            Não define flex-basis baseado no conteúdo (começa do 0).
+
+            Não muda o shrink (sempre 1 no atalho).
         */
 
         div.item {
