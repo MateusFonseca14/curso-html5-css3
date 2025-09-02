@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+
+            display: flex;
+        }
+
+        /*
+    Propriedades mais usadas com display: flex;
+
+        flex-direction → Define a direção dos itens.
+
+            row (padrão) → em linha, da esquerda p/ direita
+
+            column → em coluna, de cima p/ baixo
+
+        justify-content → Alinha os itens no eixo principal.
+
+            flex-start, flex-end, center, space-between, space-around, space-evenly
+
+        align-items → Alinha os itens no eixo cruzado.
+
+            flex-start, flex-end, center, stretch, baseline
+
+        flex-wrap → Define se os itens podem quebrar linha.
+
+            nowrap (padrão), wrap, wrap-reverse
+
+    📌 flex: auto
+
+        É um atalho para:
+
+            flex: 1 1 auto;
+
+
+        Que significa:
+
+            flex-grow: 1 → o item pode crescer para ocupar o espaço livre.
+
+            flex-shrink: 1 → o item pode encolher se faltar espaço.
+
+            flex-basis: auto → o tamanho inicial é baseado no conteúdo ou em um valor definido de width/height.
+
+    ⚡ Em resumo:
+
+        display: flex → cria o sistema de alinhamento.
+
+        flex: auto → faz os itens dentro desse sistema crescerem/encolherem de forma equilibrada.
+        */
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
