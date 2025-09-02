@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flebox Centralizado</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /* 
+        📌 box-sizing: border-box
+
+            Define como o tamanho total de um elemento é calculado no CSS.
+
+            Com border-box, o width e height do elemento já incluem:
+
+            padding (preenchimento interno)
+
+            border (borda)
+
+            Ou seja, o tamanho total do elemento não aumenta se você adicionar padding ou borda. 
+            */
+        }
+
+        body {
+            background-color: lightsalmon;
+        }
+
+        main {
+            background-color: lightgreen;
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;              /* ativa o Flexbox */
+            flex-flow: row nowrap;      /* direção: linha (horizontal), sem quebra de linha */
+            justify-content: center;    /* eixo principal (horizontal) → centraliza os itens */
+            align-items: center;        /* eixo transversal (vertical) → centraliza os itens */
+        }
+
+        section {
+            background-color: lightseagreen;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Tela de Login</h1>
+        </section>
+    </main>
+</body>
+</html>
