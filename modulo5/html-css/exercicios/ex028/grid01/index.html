@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout na prática</title>
+    <style>
+        div.container {
+            border: 3px solid blue;
+            height: 250px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+            /* 
+    🔎 Explicação:
+
+        display: grid;
+            → Ativa o Grid Layout no container, permitindo organizar elementos em linhas e colunas.
+
+        grid-template-columns: auto auto auto;
+            → Cria 3 colunas, cada uma com a largura ajustada automaticamente ao tamanho do conteúdo.
+
+        grid-template-rows: auto auto auto;
+            → Cria 3 linhas, cada uma com a altura ajustada automaticamente ao tamanho do conteúdo.
+
+        gap: 10px;
+            → Adiciona 10px de espaçamento tanto entre colunas quanto entre linhas (como um “respiro” entre os blocos).
+
+    👉 Resultado: um grid 3x3 (três colunas × três linhas), com espaço de 10px entre os itens. */
+        }
+
+        div.item {
+            border: 3px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+    </div>
+</body>
+</html>
