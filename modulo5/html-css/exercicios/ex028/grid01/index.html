@@ -12,7 +12,13 @@
             grid-template-columns: auto auto auto;
             grid-template-rows: auto auto auto;
             gap: 10px;
+            align-items: stretch;
+            justify-items: stretch;
+            align-content: stretch;
+            justify-content: stretch;
             /* 
+📌 Propriedades do Grid Container
+
     🔎 Explicação:
 
         display: grid;
@@ -24,10 +30,129 @@
         grid-template-rows: auto auto auto;
             → Cria 3 linhas, cada uma com a altura ajustada automaticamente ao tamanho do conteúdo.
 
+        grid-template (atalho)
+
+            É um shorthand que junta:
+            grid-template-rows
+            grid-template-columns
+
+        🔹 Exemplo:
+            grid-template: 100px 100px 100px /
+                           auto auto auto;
+
+        🔎 Explicação:
+            grid-template-rows: 100px 100px 100px
+            grid-template-columns: auto auto auto
+
         gap: 10px;
             → Adiciona 10px de espaçamento tanto entre colunas quanto entre linhas (como um “respiro” entre os blocos).
 
-    👉 Resultado: um grid 3x3 (três colunas × três linhas), com espaço de 10px entre os itens. */
+    👉 Resultado: um grid 3x3 (três colunas × três linhas), com espaço de 10px entre os itens.
+    
+    🔹 O que é repeat()?
+
+        É uma função usada dentro de grid-template-columns ou grid-template-rows para evitar repetição de valores.
+        Em vez de escrever várias vezes o mesmo tamanho, você usa repeat(n, valor).
+
+    📌 Sintaxe
+
+        repeat(quantidade, tamanho)
+
+        quantidade → número de repetições
+
+        tamanho → pode ser px, %, fr, auto, ou até outra função como minmax()
+
+📌 Exemplos
+
+    1 - Colunas iguais
+
+        grid-template-columns: repeat(3, 1fr);
+
+    🔎 Equivale a:
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        → Cria 3 colunas iguais.
+
+
+    2 - Linhas iguais
+
+        grid-template-rows: repeat(4, 100px);
+
+    🔎 Equivale a:
+
+        grid-template-rows: 100px 100px 100px 100px;
+
+        → Cria 4 linhas de 100px cada.
+
+
+    3 - Combinação
+
+        grid-template-columns: 200px repeat(2, 1fr) 100px;
+
+    🔎 Equivale a:
+
+        grid-template-columns: 200px 1fr 1fr 100px;
+
+        → Mistura tamanhos fixos e repetidos.
+
+
+    4 - Com minmax()
+
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+
+        → Cria 3 colunas que nunca ficam menores que 150px, mas podem crescer até ocupar frações iguais do espaço.
+
+
+    5 - O repeat() pode ser usado dentro do grid-template (atalho), porque ele nada mais é do que um valor válido para rows ou columns.
+
+    📌 Exemplo 1 — Só com rows e columns
+        grid-template: repeat(3, 100px) / repeat(3, 1fr);
+
+    🔎 Equivale a:
+
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    👉 Resultado: Grid 3x3 (3 linhas de 100px × 3 colunas iguais).
+
+    ✅ Resumindo:
+
+        repeat() economiza código.
+        Pode ser usado tanto em grid-template-columns quanto em grid-template-rows. 
+        Pode usar repeat() dentro do grid-template.
+        Aceita combinações com valores diferentes.
+    
+    🔹 Alinhamento do grid inteiro
+
+        Alinhamento interno → justify-items, align-items, place-items
+
+        justify-items
+            Alinhamento horizontal dos itens dentro das células.
+            Valores: start | end | center | stretch
+
+        align-items
+            Alinhamento vertical dos itens dentro das células.
+            Valores: start | end | center | stretch
+
+        place-items
+            Atalho para align-items + justify-items.
+
+    🔹 Alinhamento do conteúdo (grid inteiro dentro do container pai)
+    
+        Alinhamento externo → justify-content, align-content, place-content
+    
+        justify-content
+            Alinha o grid horizontalmente dentro do container.
+            Valores: start | end | center | space-between | space-around | space-evenly
+
+        align-content
+            Alinha o grid verticalmente dentro do container.
+            Valores: start | end | center | stretch | space-between | space-around | space-evenly
+
+        place-content
+            Atalho para align-content + justify-content.
+    */
         }
 
         div.item {
