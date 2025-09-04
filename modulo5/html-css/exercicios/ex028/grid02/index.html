@@ -7,16 +7,65 @@
     <style>
         div.container {
             border: 3px solid blue;
-            height: 250px;
             display: grid;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto auto auto;
+            grid-template-rows: repeat(3, 80px);
+            grid-template-columns: 100px 40% repeat(2, 1fr);
+            grid-auto-flow: row;
+            grid-auto-rows: 80px;
+            grid-auto-columns: 120px;
             gap: 10px;
-            align-items: stretch;
-            justify-items: stretch;
-            align-content: stretch;
-            justify-content: stretch;
+            place-items: normal normal;
+            place-content: normal normal;
         }
+            /* 
+        🔹 O que é grid-auto-rows?
+
+            É uma propriedade do Grid Container que define a altura padrão das linhas criadas automaticamente (quando você não declarou todas as linhas no grid-template-rows).
+
+        👉 Em outras palavras:
+
+            Se você colocar mais itens do que o grid previa, o navegador cria linhas extras automaticamente.
+
+            O grid-auto-rows define qual será a altura dessas linhas extras.
+
+        ✅ Resumindo:
+
+            grid-auto-rows → controla altura das linhas automáticas.
+
+            Padrão é auto (acompanha o conteúdo).
+
+            Muito útil quando você não sabe quantas linhas vai ter no grid.
+
+        🔹 O que é grid-auto-columns?
+
+            É uma propriedade do Grid Container que define a largura padrão das colunas criadas automaticamente.
+
+        👉 Funciona parecido com grid-auto-rows, só que para colunas.
+        Ela só entra em ação quando o navegador precisa criar colunas extras (não previstas em grid-template-columns).
+
+        ✅ Resumindo:
+
+            grid-auto-rows → controla altura das linhas extras.
+
+            grid-auto-columns → controla largura das colunas extras.
+
+            Usado principalmente quando os itens ocupam posições que não estavam planejadas no grid-template.
+
+        🔹 O que é grid-auto-flow?
+
+            É uma propriedade do Grid Container que define como os itens do grid são colocados automaticamente dentro da grade, quando você não usa posicionamento manual (grid-row, grid-column, grid-area).
+
+        👉 Ele controla a direção do preenchimento e se o navegador deve tentar preencher espaços vazios.
+
+        ✅ Resumindo:
+
+            row → preenche linha por linha (padrão).
+
+            column → preenche coluna por coluna.
+
+            dense → tenta compactar itens, evitando espaços vazios.
+            */
+          
 
         div.item {
             border: 3px solid red;
@@ -34,6 +83,8 @@
         <div class="item">F</div>
         <div class="item">G</div>
         <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
     </div>
 </body>
 </html>
